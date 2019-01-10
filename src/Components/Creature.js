@@ -1,14 +1,12 @@
-import React, { Components } from 'react';
+import React, { Component } from 'react';
 
 
-class Creature extends Components{
+class Creature extends Component{
 
 
   constructor(props) {
     super(props); //Person, Door
     this.state = {
-      hp,
-      attk
     }
   }
 
@@ -22,3 +20,5 @@ class Creature extends Components{
     return 'Creature';
   }
 }
+
+export default Creature;

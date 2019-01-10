@@ -1,7 +1,7 @@
-import React, { Components } from 'react';
+import React, { Component } from 'react';
 
 
-class Battle extends Components{
+class Battle extends Component{
 
   constructor(props) {
     super(props); //Person

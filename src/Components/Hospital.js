@@ -1,7 +1,7 @@
-import React, { Components } from 'react';
+import React, { Component } from 'react';
 
 
-class Hospital extends Components{
+class Hospital extends Component{
 
   constructor(props) {
     super(props); //Person, Door
@@ -18,3 +18,5 @@ class Hospital extends Components{
     return 'Hospital';
   }
 }
+
+export default Hospital;

@@ -1,6 +1,6 @@
-import React, { Components } from 'react';
+import React, { Component } from 'react';
 
-class Map extends Components{
+class Map extends Component{
 
   constructor(props) {
     super(props); //Person, Door
@@ -12,3 +12,5 @@ class Map extends Components{
     return 'House || Gym || Store || Town || World || Room || insideHouse etc...';
   }
 }
+
+export default Map;

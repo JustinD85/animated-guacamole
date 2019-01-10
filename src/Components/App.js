@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import '../Styles/Main.scss';
-// Import Intro
+import Intro from './Intro';
 class App extends Component {
  
 
@@ -10,7 +10,7 @@ class App extends Component {
     return (
       <div className="App">
         
-        Intro 
+       <Intro/>
       </div>
     );
   }

@@ -1,7 +1,7 @@
-import React, { Components } from 'react';
+import React, { Component } from 'react';
 
 
-class House extends Components{
+class House extends Component{
 
   constructor(props) {
     super(props); //Person, Door
@@ -11,3 +11,6 @@ class House extends Components{
     return 'Town';
   }
 }
+
+
+export default House;

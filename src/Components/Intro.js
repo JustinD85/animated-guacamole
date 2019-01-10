@@ -1,6 +1,6 @@
-import React, { Components } from 'react';
+import React, { Component } from 'react';
 
-class Intro extends Components{
+class Intro extends Component{
 
   constructor(props) {
     super(props);
@@ -19,3 +19,5 @@ class Intro extends Components{
     return 'Room(Person, people?)';
   }
 }
+
+export default Intro;
