@@ -23,7 +23,7 @@ class Intro extends Component {
         Creature Capture!
       </h1>
       <img alt="Title" src="https://picsum.photos/200/?random" style={styles} />
-      <Button onClick={()=>alert("Welcome to the Game")} variant="contained" color="primary">Start</Button>
+      <Button onClick={()=> this.props.render("map")} variant="contained" color="primary">Start</Button>
     </div>;
   }
 }
