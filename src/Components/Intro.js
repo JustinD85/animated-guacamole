@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-
-class Intro extends Component{
+import { Button, Card } from '@material-ui/core/';
+class Intro extends Component {
 
   constructor(props) {
     super(props);
     this.state = {
-      name:'some Name'
+      name: 'some Name'
     }
   }
 
@@ -14,9 +14,17 @@ class Intro extends Component{
   }
 
   render() {
-  
+    const styles = {
+      borderRadius: "25px"
+    }
 
-    return 'Room(Person, people?)';
+    return <div className="Intro">
+      <h1>
+        Creature Capture!
+      </h1>
+      <img alt="Title" src="https://picsum.photos/200/?random" style={styles} />
+      <Button onClick={()=>alert("Welcome to the Game")} variant="contained" color="primary">Start</Button>
+    </div>;
   }
 }
 
