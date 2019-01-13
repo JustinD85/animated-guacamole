@@ -1,9 +1,10 @@
-import React, { Component } from 'react';
+import React, { Component, createRef } from 'react';
 import { Button, Card } from '@material-ui/core/';
 class Intro extends Component {
 
   constructor(props) {
     super(props);
+    this.interactiveButton = createRef();
     this.state = {
       name: 'some Name'
     }
@@ -23,7 +24,13 @@ class Intro extends Component {
         Creature Capture!
       </h1>
       <img alt="Title" src="https://picsum.photos/200/?random" style={styles} />
-      <Button onClick={()=> this.props.render("map")} variant="contained" color="primary">Start</Button>
+      <button
+        onClick={() => this.props.render("map")}
+        className="start-button interactive"
+        ref={this.interactiveButton}
+      >
+        Start
+        </button>
     </div>;
   }
 }
