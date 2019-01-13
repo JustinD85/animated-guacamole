@@ -11,7 +11,12 @@ class Gym extends Component{
   render() {
   
 
-    return 'Gym';
+    return (
+      <div>
+        <h1>hello im the gym</h1>
+        <button className="interactive" onClick={() => this.props.render('map')}></button>
+      </div>
+    );
   }
 }
 

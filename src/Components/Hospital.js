@@ -15,7 +15,12 @@ class Hospital extends Component{
   render() {
   
 
-    return 'Hospital';
+    return (
+      <div>
+        <h1>hello im the clinic</h1>
+        <button className="interactive" onClick={() => this.props.render('map')}></button>
+      </div>
+    );
   }
 }
 
