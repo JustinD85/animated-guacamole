@@ -4,8 +4,7 @@ class Intro extends Component {
 
   constructor(props) {
     super(props);
-    this.buttonRef = createRef();
-    this.settingsRef = createRef();
+    this.interactiveButton = createRef();
     this.state = {
       name: 'some Name'
     }
@@ -26,18 +25,11 @@ class Intro extends Component {
       </h1>
       <img alt="Title" src="https://picsum.photos/200/?random" style={styles} />
       <button
-        // onClick={() => this.props.render("map")}
-        onClick={()=>console.log('hm',this.buttonRef)}
-        ref={this.buttonRef}
-        className="start-button">
+        onClick={() => this.props.render("map")}
+        className="start-button interactive"
+        ref={this.interactiveButton}
+      >
         Start
-        </button>
-        <button
-        // onClick={() => this.props.render("map")}
-        onClick={()=>console.log('hm',this.settingsRef)}
-        ref={this.settingsRef}
-        className="setting-button">
-        Settings
         </button>
     </div>;
   }

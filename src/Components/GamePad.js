@@ -8,7 +8,7 @@ class GamePad extends Component {
     super(props);
     this.state = {
       gamePadID: '',
-      position: { x: 410, y: 310 },
+      position: { x: 417, y: 312 },
       currentSelected: ''
     }
 
@@ -35,7 +35,7 @@ class GamePad extends Component {
     let newX = 0;
     let newY = 0;
     const gameActions = {
-      0: () => 'confirm',
+      0: () => this.confirm(),
       1: () => 'cancel',
       3: () => 'info',
       9: () => 'start',
@@ -55,8 +55,18 @@ class GamePad extends Component {
     });
   }
 
-
-
+  confirm() {
+    document.querySelectorAll('.interactive')
+      .forEach(thing => {
+        const bounds = thing.getBoundingClientRect();
+        const { position } = this.state;
+        if (position.x > bounds.x && position.x < bounds.x + bounds.width) {
+          if (position.y > bounds.y && position.y < bounds.y + bounds.height) {
+            thing.click();
+          }
+        }
+      })
+  }
 
   componentWillUnmount() {
     //Stops the constant checking for controller
@@ -78,7 +88,8 @@ class GamePad extends Component {
       width: "10px",
       position: "absolute",
       left: this.state.position.x,
-      top: this.state.position.y
+      top: this.state.position.y,
+      zIndex: 10
     }}>
 
     </div>
