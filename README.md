@@ -2,6 +2,8 @@
 Definitely NOT a pokemon clone...
 
 
+## Wiki!
+[here!](https://github.com/JustinD85/animated-guacamole/wiki)
 ## Encryption
 ### Installing On Mac OS X
 
