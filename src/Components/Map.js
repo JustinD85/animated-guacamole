@@ -12,15 +12,15 @@ class Map extends Component{
     return (
       <div className="map">
         <img className="houseone" src={require ("../images/house.png")}/>
-        <button className="houseonebutton interactive deleteMeStyle" onClick={() => alert("this is my house")}></button>
+        <button className="houseonebutton interactive deleteMeStyle" onClick={() => this.props.render('house')}></button>
         <img className="store" src={require ("../images/store.png")}/>
-        <button className="storebutton interactive deleteMeStyle" onClick={() => alert("this is the store")}></button>
+        <button className="storebutton interactive deleteMeStyle" onClick={() => this.props.render('store')}></button>
         <img className="clinic" src={require ("../images/clinic.png")}/>
-        <button className="clinicbutton interactive deleteMeStyle" onClick={() => alert("this is the clinic")}></button>
+        <button className="clinicbutton interactive deleteMeStyle" onClick={() => this.props.render('clinic')}></button>
         <img className="boss" src={require ("../images/bossbuilding.png")}/>
-        <button className="bossbutton interactive deleteMeStyle" onClick={() => alert("this is the boss battle")}></button>
+        <button className="bossbutton interactive deleteMeStyle" onClick={() => this.props.render('boss')}></button>
         <img className="housetwo" src={require ("../images/house.png")}/>
-        <button className="housetwobutton interactive deleteMeStyle" onClick={() => alert("this is my friends house")}></button>
+        <button className="housetwobutton interactive deleteMeStyle" onClick={() => this.props.render('house')}></button>
         <img className="treeone" src={require ("../images/tree.png")}/>
         <img className="treetwo" src={require ("../images/tree.png")}/>
         <img className="treethree" src={require ("../images/tree.png")}/>

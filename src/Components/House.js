@@ -8,7 +8,12 @@ class House extends Component{
   }
 
   render() {
-    return 'Town';
+    return (
+      <div>
+        <h1>hello im house</h1>
+        <button className="interactive" onClick={() => this.props.render('map')}></button>
+      </div>
+    );
   }
 }
 
