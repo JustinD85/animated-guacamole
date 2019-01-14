@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import Person from './Person'
 
 
 class GamePad extends Component {
@@ -9,7 +9,8 @@ class GamePad extends Component {
     this.state = {
       gamePadID: '',
       position: { x: 417, y: 312 },
-      currentSelected: ''
+      currentSelected: '',
+      showUI: false
     }
 
   }
@@ -30,33 +31,36 @@ class GamePad extends Component {
     });
   }
 
-  invokeAction(action) {
+  invokeAction = (action) => {
     const oldX = this.state.position.x;
     const oldY = this.state.position.y;
     let newX = 0;
     let newY = 0;
+    let showUI = this.state.showUI;
     const gameActions = {
       0: () => this.confirm(),
       1: () => 'cancel',
-      3: () => 'info',
+      3: () => showUI = !showUI,
       9: () => 'start',
       12: () => newY = -10,//'up'
       13: () => newY = 10,//'down'
       14: () => newX = -10,//'left'
       15: () => newX = 10,//'right'
     }
-
+    // console.log(gameActions[action]());
+    
     if (gameActions[action]) gameActions[action]();
-
+    console.log(showUI)
     this.setState({
       position: {
         x: newX + oldX,
-        y: newY + oldY
-      }
+        y: newY + oldY,
+      },
+      showUI
     });
   }
 
-  confirm() {
+  confirm =()=> {
     document.querySelectorAll('.interactive')
       .forEach(thing => {
         const bounds = thing.getBoundingClientRect();
@@ -69,7 +73,7 @@ class GamePad extends Component {
       })
   }
 
-  listenKeyboardEvents =()=> {
+  listenKeyboardEvents = () => {
     document.querySelector('body').addEventListener('keydown', (e) => {
       const action = e.key;
       const gameActions = {
@@ -82,8 +86,8 @@ class GamePad extends Component {
         a: 14,//'left'
         d: 15,//'right'
       }
-      gameActions[action] && this.invokeAction(gameActions[action]) 
-      
+      gameActions[action] && this.invokeAction(gameActions[action])
+
     })
   }
 
@@ -103,17 +107,7 @@ class GamePad extends Component {
     this.setState({ gamePadID });
   }
   render() {
-    return <div style={{
-      background: 'red',
-      height: "10px",
-      width: "10px",
-      position: "absolute",
-      left: this.state.position.x,
-      top: this.state.position.y,
-      zIndex: 10
-    }}>
-
-    </div>
+    return <Person showUI={this.state.showUI} position={this.state.position} />
   }
 }
 
