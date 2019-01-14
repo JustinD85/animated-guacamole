@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../Styles/Main.scss';
+import '../styles/Main.scss';
 import Intro from './Intro';
 import Room from './Room';
 import Map from './Map';
