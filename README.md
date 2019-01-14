@@ -1,5 +1,5 @@
 # animated-guacamole
-Definitely NOT a pokemon clone...
+Creature raising game...
 
 
 ## Wiki!
