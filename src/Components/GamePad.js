@@ -29,6 +29,7 @@ class GamePad extends Component {
       this.invokeAction(b);
     });
   }
+
   invokeAction(action) {
     const oldX = this.state.position.x;
     const oldY = this.state.position.y;
@@ -39,10 +40,10 @@ class GamePad extends Component {
       1: () => 'cancel',
       3: () => 'info',
       9: () => 'start',
-      12: () => newY = -15,//'up',
-      13: () => newY = 15,//'down',
-      14: () => newX = -15,//'left',
-      15: () => newX = 15,//'right'
+      12: () => newY = -10,//'up'
+      13: () => newY = 10,//'down'
+      14: () => newX = -10,//'left'
+      15: () => newX = 10,//'right'
     }
 
     if (gameActions[action]) gameActions[action]();
@@ -68,12 +69,32 @@ class GamePad extends Component {
       })
   }
 
+  listenKeyboardEvents =()=> {
+    document.querySelector('body').addEventListener('keydown', (e) => {
+      const action = e.key;
+      const gameActions = {
+        e: '0',
+        q: 1,
+        f: 3,
+        Enter: 9,
+        w: 12,//'up'
+        s: 13,//'down'
+        a: 14,//'left'
+        d: 15,//'right'
+      }
+      gameActions[action] && this.invokeAction(gameActions[action]) 
+      
+    })
+  }
+
   componentWillUnmount() {
     //Stops the constant checking for controller
     clearInterval(this.state.gamePadID);
   }
 
   componentDidMount() {
+    //setup event listeners for keyboard
+    this.listenKeyboardEvents();
     // Starts the constant check for controller
     const gamePadID = setInterval(() => {
       this.updateGampad();
