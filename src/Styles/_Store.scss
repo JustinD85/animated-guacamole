@@ -1,0 +1,72 @@
+.store {
+    position: relative;
+    background-image: url("../images/woodfloor.png");
+    background-size: 10%;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.storedoor {
+    position: absolute;
+    transform: translate( 180px, 710px) rotate(90deg);
+    height: 200px;
+    width: 20px;
+}
+
+.storeperson {
+    position: absolute;
+    transform: translate( 200px, 200px);
+}
+
+.storedesk {
+    position: absolute;
+    width: 200px;
+    top: 50px;
+}
+
+.storefoodone {
+    position: absolute;
+    top: 50px;
+    left: 450px;
+    width: 200px;
+}
+
+.storefoodtwo {
+    position: absolute;
+    top: 50px;
+    left: 850px;
+    width: 200px;
+    transform: rotate(180deg);
+}
+
+.storefoodthree {
+    position: absolute;
+    top: 450px;
+    left: 450px;
+    width: 200px;
+}
+
+.storefoodfour {
+    position: absolute;
+    top: 450px;
+    left: 850px;
+    width: 200px;
+    transform: rotate(180deg);
+}
+
+.storefridgeone {
+    position: absolute;
+    right: -120px;
+    top: 175px;
+    width: 300px;
+    transform: rotate(90deg)
+}
+
+.storefridgetwo {
+    position: absolute;
+    right: -120px;
+    top: 575px;
+    width: 300px;
+    transform: rotate(90deg)
+}

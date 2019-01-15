@@ -9,16 +9,17 @@ class Hospital extends Component{
   }
 
   heal() {
-    
+    //map thru the players pokemon and reassign pokemon health to 100
   }
 
   render() {
   
 
     return (
-      <div>
+      <div className="clinic">
         <h1>hello im the clinic</h1>
         <button className="interactive" onClick={() => this.props.render('map')}></button>
+        <button className="interactive" onClick={() => alert('this button alerts the function heal')}></button>
       </div>
     );
   }
