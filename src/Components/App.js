@@ -42,8 +42,8 @@ class App extends Component {
 
     return (
       <div className="App">
-        <GamePad/>
         {this.getPlayerStatus()}
+        <GamePad/>
       </div>
     );
   }
