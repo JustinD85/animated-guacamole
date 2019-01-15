@@ -1,0 +1,97 @@
+.clinic {
+    position: relative;
+    background-image: url("../images/clinicfloor.png");
+    background-size: 10%;
+    width: 100%;
+    height: 100%;
+}
+
+.clinicperson {
+    position: absolute;
+    transform: translate( 710px, 200px) rotate(90deg);
+}
+
+.clinicdoor {
+    position: absolute;
+    transform: translate( 710px, 710px) rotate(90deg);
+    height: 200px;
+    width: 20px;
+}
+
+.clinicdesk {
+    position: absolute;
+    width: 500px;
+    left: 475px;
+    top: 0px;
+}
+
+.clinicplantone {
+    position: absolute;
+    width: 150px;
+    left: 200px;
+    top: 25px;
+}
+
+.clinicplanttwo {
+    position: absolute;
+    width: 150px;
+    left: 1100px;
+    top: 25px;
+}
+
+.clinictableone {
+    position: absolute;
+    width: 200px;
+    left: 150px;
+    bottom: 200px;
+}
+
+.clinictabletwo {
+    position: absolute;
+    width: 200px;
+    right: 150px;
+    bottom: 200px;
+}
+
+.clinicchairone {
+    position: absolute;
+    width: 100px;
+    left: 25px;
+    bottom: 250px;
+}
+
+.clinicchairtwo {
+    position: absolute;
+    width: 100px;
+    left: 200px;
+    bottom: 75px;
+}
+
+.clinicchairthree {
+    position: absolute;
+    width: 100px;
+    left: 200px;
+    bottom: 420px;
+}
+
+.clinicchairfour {
+    position: absolute;
+    width: 100px;
+    left: 380px;
+    bottom: 250px;
+}
+
+.clinicchairfive {
+    position: absolute;
+    width: 100px;
+    right: 200px;
+    bottom: 75px;
+}
+
+.clinicchairsix {
+    position: absolute;
+    width: 100px;
+    right: 200px;
+    bottom: 420px;
+}
+

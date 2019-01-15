@@ -9,7 +9,7 @@ class House extends Component{
 
   render() {
     return (
-      <div>
+      <div className="house">
         <h1>hello im house</h1>
         <button className="interactive" onClick={() => this.props.render('map')}></button>
       </div>
