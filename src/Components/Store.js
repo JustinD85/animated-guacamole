@@ -9,7 +9,7 @@ class Store extends Component{
   }
 
   buy() {
-    
+    //push item to an array of players item
   }
 
   render() {
