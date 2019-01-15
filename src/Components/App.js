@@ -32,18 +32,16 @@ class App extends Component {
 
   renderArea = (string) => {
     this.setState({
-      playerStatus: string
+      playerStatus: string,
     })
   }
-
-
 
   render() {
 
     return (
       <div className="App">
         {this.getPlayerStatus()}
-        <GamePad/>
+        <GamePad playerStatus={this.state.playerStatus} playerPosition={this.state.playerPosition}/>
       </div>
     );
   }

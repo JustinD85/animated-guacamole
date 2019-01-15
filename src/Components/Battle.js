@@ -11,7 +11,14 @@ class Battle extends Component{
   render() {
   
 
-    return 'Battle';
+    return (
+      <div>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+      </div>
+    );
   }
 }
 

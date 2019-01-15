@@ -25,13 +25,23 @@ class Person extends Component {
 
   }
   render() {
-
-
+    let size = 0;
+    switch(this.props.playerStatus) {
+      case "intro":
+        size = "0px"
+        break;
+      case "map":
+        size = "10px"
+        break;
+      default: 
+        size = "40px"
+        break;
+    }
     return <div style={{zIndex: 10}}>
-      <div style={{
+      <div className="player" style={{
         background: 'red',
-        height: "10px",
-        width: "10px",
+        height: size,
+        width: size,
         position: "absolute",
         left: this.props.position.x,
         top: this.props.position.y,

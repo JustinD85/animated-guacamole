@@ -107,7 +107,7 @@ class GamePad extends Component {
     this.setState({ gamePadID });
   }
   render() {
-    return <Person showUI={this.state.showUI} position={this.state.position} />
+    return <Person showUI={this.state.showUI} position={this.state.position} playerStatus={this.props.playerStatus}/>
   }
 }
 

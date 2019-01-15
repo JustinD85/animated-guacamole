@@ -42,6 +42,50 @@ const creatures = {
       highAttack : (creature) => creature.health -= 30,
       specialAttack : function () { this.health += 50 },
     }
+  },
+  4: {
+    name: 'Atlas',
+    type: 'grass',
+    health: 100,
+    attacks: {
+      lowAttack:(creature) => creature.health -= 10,
+      midAttack : (creature) => creature.health -= 20,
+      highAttack : (creature) => creature.health -= 30,
+      specialAttack : function () { this.health += 50 },
+    }
+  },
+  5: {
+    name: 'Oceanus',
+    type: 'water',
+    health: 100,
+    attacks: {
+      lowAttack:(creature) => creature.health -= 10,
+      midAttack : (creature) => creature.health -= 20,
+      highAttack : (creature) => creature.health -= 30,
+      specialAttack : function () { this.health += 50 },
+    }
+  },
+  6: {
+    name: 'Hemara',
+    type: 'fire',
+    health: 100,
+    attacks: {
+      lowAttack:(creature) => creature.health -= 10,
+      midAttack : (creature) => creature.health -= 20,
+      highAttack : (creature) => creature.health -= 30,
+      specialAttack : function () { this.health += 50 },
+    }
+  },
+  7: {
+    name: 'Aether',
+    type: 'air',
+    health: 100,
+    attacks: {
+      lowAttack:(creature) => creature.health -= 10,
+      midAttack : (creature) => creature.health -= 20,
+      highAttack : (creature) => creature.health -= 30,
+      specialAttack : function () { this.health += 50 },
+    }
   }
 }
 
