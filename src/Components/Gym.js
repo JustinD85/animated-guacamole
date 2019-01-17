@@ -13,8 +13,8 @@ class Gym extends Component{
 
     return (
       <div  className="boss">
-        <h1>hello im the gym</h1>
-        <button className="interactive" onClick={() => this.props.render('map')}></button>
+        <img className="bosschair" src={require("../images/bosschair.png")}/>
+        <button className="bossdoor interactive" onClick={() => this.props.render('map')}></button>
       </div>
     );
   }

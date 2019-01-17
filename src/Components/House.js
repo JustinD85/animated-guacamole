@@ -10,8 +10,13 @@ class House extends Component{
   render() {
     return (
       <div className="house">
-        <h1>hello im house</h1>
-        <button className="interactive" onClick={() => this.props.render('map')}></button>
+        <img className="housetable" src={require("../images/woodentable.png")}/>
+        <img className="housechairone" src={require("../images/chair.png")}/>
+        <img className="housechairtwo" src={require("../images/chair.png")}/>
+        <img className="housechairthree" src={require("../images/chair.png")}/>
+        <img className="housechairfour" src={require("../images/chair.png")}/>
+        <img className="houseplant" src={require("../images/plant.png")}/>
+        <button className="housedoor interactive" onClick={() => this.props.render('map')}></button>
       </div>
     );
   }

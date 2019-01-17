@@ -5,3 +5,54 @@
     width: 100%;
     height: 100%;
 }
+
+.housetable {
+    position: absolute;
+    width: 300px;
+    transform: rotate(90deg);
+    left: 600px;
+    top: 180px;
+}
+
+.housechairone {
+    position: absolute;
+    width: 100px;
+    left: 600px;
+    top: 160px;
+}
+
+.housechairtwo {
+    position: absolute;
+    width: 100px;
+    left: 800px;
+    top: 160px;
+}
+
+.housechairthree {
+    position: absolute;
+    width: 100px;
+    left: 600px;
+    top: 600px;
+}
+
+.housechairfour {
+    position: absolute;
+    width: 100px;
+    left: 800px;
+    top: 600px;
+}
+
+.houseplant {
+    position: absolute;
+    width: 200px;
+    top: 50px;
+    left: 50px;
+
+}
+
+.housedoor {
+    position: absolute;
+    transform: translate( 180px, 710px) rotate(90deg);
+    height: 200px;
+    width: 20px; 
+}
